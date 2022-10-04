@@ -1,0 +1,30 @@
+section 
+
+    .row.no-gutters
+        .col-lg-1.border-right
+        .col-lg-1
+            .d-flex
+                    a.navbar-brand.text-light(href='/') Gestión
+                        span.font-weight-bold Hoteles
+            
+        nav.navbar.navbar-expand-lg.ml-auto
+            .container-fluid 
+                .container
+                    button.navbar-toggler.bg-light(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                    #navbarSupportedContent.collapse.navbar-collapse
+                        ul.navbar-nav.mr-auto 
+                            li.nav-item
+                                a.nav-link.text-light.lead.active(aria-current='page' href='/') Home
+                            li.nav-item
+                                a.nav-link.text-light.lead(href='/registrarHoteles') Registrar Hoteles
+                            li.nav-item
+                                a.nav-link.text-light.lead(href='/consultarHoteles') Consultar Hoteles
+                            li.nav-item
+                                a.nav-link.text-light.lead(href='/registrarHabitaciones') Registrar Habit
+                            li.nav-item
+                                a.nav-link.text-light.lead(href='/consultarHabitaciones') Consultar Habit
+                            li.nav-item
+                                a.nav-link.text-light.lead(href='/acercaDe') Acerca De ...
+                            li.nav-item
+                                a.nav-link.text-light.lead(href='/contactanos') Contactanos

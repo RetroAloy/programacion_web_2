@@ -1,0 +1,104 @@
+:root {
+    --color-dark: #1b1b1b;
+    --color-light: #fff;
+    --color-gold: #c7b8a5;
+    --color-gray: #efefef;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+
+.lead-xl {
+    font-size: 1.75rem;
+}
+
+.nav-link {
+    margin-left: 2rem;
+}
+
+.sideways {
+    writing-mode: vertical-lr;
+    display: block;
+    margin: 3.5rem 0;
+    transform: rotate(-180deg);
+}
+
+.btn-primary-mine {
+    background-color: transparent;
+    border: 1px solid var(--color-light);
+    border-radius: 0;
+    color: var(--color-light);
+    padding: -7rem 2.5rem;
+    font-size: 1.25rem;
+}
+
+.btn-primary-mine:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: 1px solid var(--color-light);
+}
+
+.navbar {
+    min-height: 5rem;
+}
+
+.navbar-brand {
+    min-height: 5rem;
+}
+
+.bg-light {
+    background-color: var(--color-light);
+}
+
+.bg-grey {
+    background-color: var(--color-gray);
+}
+
+.border-right {
+    border-right: 1px solid rgba(256,256,256,.1) !important;
+}
+
+.text-dark {
+    color: var(--color-dark);
+}
+
+@media (max-width: 1199.98px) {
+    .sideways {
+        margin: 2rem 0;
+    }
+
+    .lead-xl {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width:991.98px){
+    .content {
+        padding: 5rem 0;
+    }
+}
+
+.bg {
+    background-image: url("../img/imagen-registro.jpg");
+    background-position: center center;
+}
+
+.bg-degradado {
+    background: #ffe259;
+    background: linear-gradient(to right, #F5DBE0, #B3EADF);
+}
+
+.bg-degradado-acerca-de {
+    background: #ffe259;
+    background: linear-gradient(to right, #BFD7ED, #EDD5BF);
+}
+
+.bg-habitaciones {
+    background-image: url("../img/imagen-registro-habitacion.jpg");
+    background-position: center center;
+}
