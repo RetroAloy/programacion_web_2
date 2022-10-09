@@ -31,7 +31,7 @@ const router = Router();
 router.get("/",                       paginaInicio);
 router.get("/registrarHoteles",       paginaRegistrarHoteles);
 router.get("/consultarHoteles",       paginaConsultarHoteles);
-router.get("/acercaDe",               paginaAcercaDe);
+//router.get("/acercaDe",               paginaAcercaDe);
 router.get("/contactanos",            paginaContactanos);
 router.get("/gerentes",               paginaGerentes);
 router.get("/registrarHabitaciones",  paginaRegistrarHabitaciones);

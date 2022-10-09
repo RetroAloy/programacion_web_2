@@ -1,20 +1,29 @@
 extends ./layout/index.pug
-block compartircontenido
+block compartircontenido 
     main.bg-degradado
-        .container.mt-5.text-dark
-            h1.text-center.mt-5 #{pagina}
-            .row.py-5
-                if hoteles
+        .container.mt-5.justify-content-center
+            h1.text-center.mt-5 #{pagina}  
+            p Escribe para filtrar los resultados 
+            input#myInput.form-control.mb-2(type="text" placeholder="Buscar" onkeyup="myFunction()")
+            if hoteles                                    
+                table#myTable.table-responsive.table.table-light.table-hover
+                    thead
+                        tr
+                        th Nombre Hotel
+                        th Dirección Hotel 
+                        th Telefono Hotel 
+                        th Correo Hotel
+                        th Modificar 
+                        th Eliminar
                     each hotel in hoteles
-                            .col-md.col-lg-4.nv-4
-                                .card
-                                    h5.card-header= `Hotel #${hotel.id_htl}`
-                                    .card-body
-                                        h5.card-title=`${hotel.nombre}`
-                                        p.card-text=`Tel.: ${hotel.telefono}`
-                                        p.card-text=`Dir.: ${hotel.direccion}`
-                                        p.card-text=`Email: ${hotel.direccion}`
-                                        p.card-text=`Gerente: ${hotel.gerente.nombre} ${hotel.gerente.ap_paterno} ${hotel.gerente.ap_materno}`
-                                        a.btn.btn-warning.mr-2(href=`/modificarHoteles?id=${hotel.id_htl}`) Modificar  
-                                        |
-                                        a.btn.btn-danger(href=`/eliminarHoteles?id=${hotel.id_htl}`) Eliminar
+
+                        tbody
+                            tr
+                            td #{hotel.nombre}
+                            td #{hotel.direccion}
+                            td #{hotel.telefono}
+                            td #{hotel.correo}
+                            td 
+                                a.btn.btn-outline-warning(href=`/modificarHoteles?id=${hotel.id_htl}`) Modificar
+                            td 
+                                a.btn.btn-outline-danger(href=`/eliminarHoteles?id=${hotel.id_htl}`) Elimina

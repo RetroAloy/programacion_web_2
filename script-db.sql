@@ -11,7 +11,7 @@ ap_paterno                    VARCHAR(20) NOT NULL,
 ap_materno                    VARCHAR(20) NOT NULL,
 telefono                      VARCHAR(10) NOT NULL,
 PRIMARY KEY(id_grt)
-)DEFAULT CHARACTER SET UTF8MB4;
+);
 
 --Para relaciones 1:1 la llave foranea va en una sola tabla de cualquiera de las dos entidades
 --Creamos tabla hoteles
@@ -22,9 +22,9 @@ direccion                       VARCHAR(100) NOT NULL,
 telefono                        VARCHAR(30)  NOT NULL,
 correo                          VARCHAR(300) NOT NULL,
 id_grt                          INTEGER,
-PRIMARY KEY(id_htl),N DELETE CASCADE
-FOREIGN KEY(id_grt) REFERENCES gerentes(id_grt) ON DELETE CASCADE
-)DEFAULT CHARACTER SET UTF8MB4;
+PRIMARY KEY(id_htl),
+FOREIGN KEY(id_grt) REFERENCES gerentes(id_grt) ON DELETE CASCADE  --On Delete Cascade, solo para FK
+);
 
 --Creamos tabla habitaciones
 CREATE TABLE habitaciones(
@@ -35,4 +35,4 @@ refrigerador                    BOOLEAN     NOT NULL,
 id_htl                          INTEGER,
 PRIMARY KEY(id_hbt),
 FOREIGN KEY(id_htl) REFERENCES hoteles(id_htl) ON DELETE CASCADE
-)DEFAULT CHARACTER SET UTF8MB4;
+);

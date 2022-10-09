@@ -1,30 +1,28 @@
-section 
+header  
 
-    .row.no-gutters
-        .col-lg-1.border-right
-        .col-lg-1
-            .d-flex
-                    a.navbar-brand.text-light(href='/') Gestión
-                        span.font-weight-bold Hoteles
-            
-        nav.navbar.navbar-expand-lg.ml-auto
-            .container-fluid 
-                .container
-                    button.navbar-toggler.bg-light(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-                        span.navbar-toggler-icon
-                    #navbarSupportedContent.collapse.navbar-collapse
-                        ul.navbar-nav.mr-auto 
-                            li.nav-item
-                                a.nav-link.text-light.lead.active(aria-current='page' href='/') Home
-                            li.nav-item
-                                a.nav-link.text-light.lead(href='/registrarHoteles') Registrar Hoteles
-                            li.nav-item
-                                a.nav-link.text-light.lead(href='/consultarHoteles') Consultar Hoteles
-                            li.nav-item
-                                a.nav-link.text-light.lead(href='/registrarHabitaciones') Registrar Habit
-                            li.nav-item
-                                a.nav-link.text-light.lead(href='/consultarHabitaciones') Consultar Habit
-                            li.nav-item
-                                a.nav-link.text-light.lead(href='/acercaDe') Acerca De ...
-                            li.nav-item
-                                a.nav-link.text-light.lead(href='/contactanos') Contactanos
+    nav.navbar.navbar-expand-md.bg-color1
+        a.navbar-brand(href='#') Hoteles Zacatlán
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#collapsibleNavbar')
+            span.navbar-toggler-icon
+        #collapsibleNavbar.collapse.navbar-collapse
+
+            ul.navbar-nav
+                li.nav-item
+                    a.nav-link(href='/') Inicio
+                
+                li.nav-item.dropdown
+                    a#navbardrop.nav-link.dropdown-toggle(href='#' data-toggle='dropdown')
+                        | Hoteles
+                    .dropdown-menu.ml-4
+                        a.dropdown-item(href='/registrarhoteles') Registro
+                        a.dropdown-item(href='/consultarhoteles') Consulta
+
+                li.nav-item.dropdown
+                    a#navbardrop.nav-link.dropdown-toggle(href='#' data-toggle='dropdown')
+                        | Habitaciones 
+                    .dropdown-menu.ml-4
+                        a.dropdown-item(href='/registrarhabitaciones') Registro
+                        a.dropdown-item(href='/consultarhabitaciones') Consulta
+                
+                li.nav-item
+                    a.nav-link(href='/') Inicio
